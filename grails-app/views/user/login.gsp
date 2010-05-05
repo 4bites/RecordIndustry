@@ -1,4 +1,4 @@
-   <g:form name="loginForm" action="handleLogin" method="get">
+   <g:form name="loginForm" action="handleLogin" method="post">
       <g:textField name="email" />  
       <g:textField name="password" />  
       <g:actionSubmit value="Login" action="handleLogin" />  

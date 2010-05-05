@@ -12,7 +12,7 @@ class MovieWebTests extends grails.util.WebTest {
    void test001XMovieXNew() {
 	webtest('Checkear que se puede entrar al alta de pelicula solo estando logueado'){
             invoke '/movie/create'
-	    verifyInputField(name:'email',formName:'loginForm')
+	    verifyInputField(name:'email',formName:'loginForm', value:'')
 	}
     }
 
