@@ -11,7 +11,7 @@ class UserController {
 	        if(user.password == params.password) {
 	            log.debug 'Usuario $user.email valido'
 	            session.user = user
-                    redirect(controller:'company')
+                    redirect(controller:params.redirect)
 	        } else {
 		    log.debug 'Password de ${params.email} invalida'
 	            render(view:'login', model:[message:"Password incorrect"])

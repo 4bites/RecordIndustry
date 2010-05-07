@@ -7,7 +7,7 @@ class SecurityFilters {
                     redirect(controller:'user', action:'login')
   		    return true 
                 } else if(!session.user && !actionName.equals('login')) { 
-                    redirect(controller:'user', action:'login') 
+                    redirect(controller:'user', action:'login', params:[redirect:request.forwardURL]) 
                     return false 
                 } 
             }
